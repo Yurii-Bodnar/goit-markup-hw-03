@@ -20,6 +20,9 @@ body {
 }
 
 /* Header */
+.page-header {
+  border: 1px solid #ececec;
+}
 
 .header-nav {
   display: flex;
