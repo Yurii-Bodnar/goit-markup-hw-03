@@ -19,7 +19,32 @@ body {
   list-style: none;
 }
 .block {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* Header */
@@ -125,12 +150,15 @@ body {
   background: var(--hero-footer-backgraund-color);
 }
 .hero-button {
+  width: 200px;
+  height: 50px;
   color: var(--main-white-color);
   background: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
+  border-width: 0;
 }
 .section {
   padding-top: 94px;
@@ -204,6 +232,9 @@ body {
 /* .person {
   margin-bottom: 30px;
 } */
+.person {
+  display: block;
+}
 .posution {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -221,8 +252,8 @@ body {
 }
 .person-title {
   margin-top: 0px;
-  margin-bottom: 30px;
   text-align: center;
+  margin-bottom: 0;
 
   font-size: 16px;
   line-height: 1.18;
@@ -247,6 +278,9 @@ body {
 }
 .contact-margin {
   margin-bottom: 9px;
+}
+.contact-margin:last-child {
+  margin-bottom: 0%;
 }
 .logostudia-accent {
   color: var(--main-white-color);
@@ -316,9 +350,9 @@ body {
 .portfolio-filters {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
 }
 .pictures-filters {
-  margin-bottom: 20px;
 }
 .project {
   margin-right: 30px;
@@ -333,6 +367,8 @@ body {
 }
 
 .project-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -340,5 +376,5 @@ body {
   color: var(--main-black-color);
 }
 .project-text {
-  padding: 20px 24px 54px;
+  padding: 20px 24px;
 }
